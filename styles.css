@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Do+Hyeon&family=Libre+Caslon+Display&display=swap');
+
+h1 {
+    color: #444;
+    background-color: beige;
+    box-shadow: 0 -0.3rem 1rem #00000044;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    font-size: 3rem;
+    border-radius: 10px;
+    font-family: 'Do Hyeon', sans-serif;
+    border-left: 0.5rem solid burlywood;
+}
+
+header{
+    position: sticky;
+    top: -5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2rem 5rem white;
+    z-index: 10;
+}
+
+
+main.grid {
+    width: 90%;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+
+    grid-auto-flow: dense;
+
+}
+
+a {
+    font-family: 'Libre Caslon Display', serif;
+}
+
+
+main a {
+    position: relative;
+    display: block;
+    margin: 0.5rem;
+
+    background-color: #8499a5;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: 0 0 0.3rem #555;
+    opacity: 0.8;
+
+    text-decoration: none;
+}
+
+main a:hover {
+    margin: 0;
+    box-shadow: 0 0 0.6rem black;
+    transition: all 0.2s;
+    opacity: 1;
+
+
+}
+
+main a:hover h2 {
+    background-color: #ffffff50;
+    text-decoration: underline 2px black;
+}
+
+body::after {
+    content: "made by Ben";
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: right;
+}
+
+
+
+h2 {
+    margin: 0;
+    padding: 2px;
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    text-shadow: 0 0 0.3rem white;
+
+    top: 50%;
+    position: relative;
+
+    transform: translate(0, -50%);
+    background-color: beige;
+    transition: all 1s;
+    text-decoration: underline 4px burlywood;
+
+}
+
+article p {
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5rem;
+    column-count: 2;
+    border-top: 0.5rem solid burlywood;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1rem;
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+}
+
+main article p {
+    max-width: 90rem;
+    margin: auto;
+}
+
+section img {
+    max-height: 30rem;
+    height: 44rem;
+    max-width: 95vw;
+    display: block;
+    margin: 1.5rem;
+    opacity: 0.85;
+    transition: all 0.1s;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #444;
+}
+
+section img:hover {
+    opacity: 1;
+    
+    box-shadow: 0 0 0.8rem #000;
+}
+
+
+
+section.flex {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+
+
+
+#linz {
+    background-image: url("img/linz.jpg");
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+#oslo {
+    background-image: url("img/oslo.jpg");
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+#london {
+    background-image: url("img/london.jpg");
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+#stPetersburg {
+
+    background-image: url("img/st_petersburg.jpeg");
+    grid-column: span 1;
+    grid-row: span 3;
+
+}
+
+#uppsala {
+    background-image: url("img/uppsala.jpg");
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+#warschau {
+    background-image: url("img/warschau.jpg");
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+#montreal {
+    background-image: url("img/montreal.jpg");
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+
+nav {
+    background-color: white;
+    padding: 1rem 3rem;
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+   
+    
+
+}
+
+
+
+nav a {
+    font-size: 2rem;
+
+    text-decoration: none;
+    transition: all 0.3s;
+    color: #555555;
+    border: 1px solid white;
+}
+
+nav a:hover {
+
+    border-top: 1px solid lightslategray;
+    border-bottom: 1px solid lightslategray;
+    color: black;
+}
+
+nav a.current {
+    border-top: 3px solid lightslategray;
+    border-bottom: 3px solid lightslategray;
+    
+    font-weight: bold;
+}
+
+form{
+    width: 95%;
+    max-width: 50rem;
+    margin: auto;
+    padding: 1rem;
+
+    border-top: 0.5rem solid burlywood;
+    border-radius: 1rem 1rem 0 0;
+
+    font-size: 2rem;
+}
+
+form label{
+    margin-right: calc(1rem + 10vw);
+}
+
+form label::before{
+    content: "";
+    display: block;
+    margin-bottom: 1rem;
+}
+
+form input[type = "text"], form input[type = "email"]{
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 1660px) {
+    main.grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 300px;
+    }
+
+    main.grid h2{
+        font-size: 3.4rem;
+    }
+
+   
+}
+@media print{
+    section img, nav{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1630px) {
+    section img:last-of-type:hover {
+
+        margin-bottom: 1.5rem;
+
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    main.grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+    main.grid h2{
+        font-size: 2.6rem;
+    }
+
+    article p {
+
+        column-count: 1;
+
+    }
+
+    section img,
+    section img:hover,
+    section img:last-of-type:hover {
+
+        opacity: 1;
+        max-height: 30rem;
+        margin: 0.5rem;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 0 0.8rem #444;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    header{
+        top: -30rem;
+    }
+
+    h1{
+        font-size: 2.2rem;
+        padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+    }
+    main.grid {
+        display: block;
+    }
+
+    main.grid a {
+        height: 15rem;
+    }
+
+    nav{
+        padding: 1rem 0;
+    }
+
+    section img{
+        height: auto;
+        max-height: none;
+    }
+}
